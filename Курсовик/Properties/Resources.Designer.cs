@@ -63,6 +63,16 @@ namespace Курсовик.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_add_to_cart_1586090__1_ {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-add-to-cart-1586090 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_rifle_2062174__1_ {
             get {
                 object obj = ResourceManager.GetObject("free-icon-rifle-2062174 (1)", resourceCulture);
@@ -76,6 +86,16 @@ namespace Курсовик.Properties {
         internal static System.Drawing.Bitmap free_icon_soldier_2062172 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-soldier-2062172", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap locked {
+            get {
+                object obj = ResourceManager.GetObject("locked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +163,26 @@ namespace Курсовик.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap premium_icon_military_aircraft_2046891__1_ {
+            get {
+                object obj = ResourceManager.GetObject("premium-icon-military-aircraft-2046891 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premium_icon_tank_2046893__1_ {
+            get {
+                object obj = ResourceManager.GetObject("premium-icon-tank-2046893 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap premium_icon_torpedo_2062254 {
             get {
                 object obj = ResourceManager.GetObject("premium-icon-torpedo-2062254", resourceCulture);
@@ -153,9 +193,39 @@ namespace Курсовик.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap premium_icon_warehouse_4450774 {
+            get {
+                object obj = ResourceManager.GetObject("premium-icon-warehouse-4450774", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap premium_icon_white_flag_2062227 {
             get {
                 object obj = ResourceManager.GetObject("premium-icon-white-flag-2062227", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sklad {
+            get {
+                object obj = ResourceManager.GetObject("sklad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

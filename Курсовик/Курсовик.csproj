@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +50,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ammu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ammu.Designer.cs">
+      <DependentUpon>ammu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auto.Designer.cs">
+      <DependentUpon>auto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cart.Designer.cs">
+      <DependentUpon>cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="log.Designer.cs">
+      <DependentUpon>log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pistol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pistol.Designer.cs">
+      <DependentUpon>pistol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plan.Designer.cs">
+      <DependentUpon>plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prof.Designer.cs">
+      <DependentUpon>prof.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regform.Designer.cs">
+      <DependentUpon>regform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rock.Designer.cs">
+      <DependentUpon>rock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tank.Designer.cs">
+      <DependentUpon>tank.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ammu.resx">
+      <DependentUpon>ammu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auto.resx">
+      <DependentUpon>auto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cart.resx">
+      <DependentUpon>cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="log.resx">
+      <DependentUpon>log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pistol.resx">
+      <DependentUpon>pistol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plan.resx">
+      <DependentUpon>plan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prof.resx">
+      <DependentUpon>prof.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +153,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="regform.resx">
+      <DependentUpon>regform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rock.resx">
+      <DependentUpon>rock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tank.resx">
+      <DependentUpon>tank.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +204,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\premium-icon-barracks-2046897 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log1\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log1\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-add-to-cart-1586090 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-military-aircraft-2046891 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-tank-2046893 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-warehouse-4450774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sklad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
