@@ -9,7 +9,7 @@ namespace Курсовик
 {
     class DB
     {
-        MySqlConnection connection = new MySqlConnection("server=bogdanln.beget.tech;port=3306;username=bogdanln_1; password=Vfndtqrf1337 ;database=bogdanln_1");
+        MySqlConnection connection = new MySqlConnection("server=bogdanln.beget.tech;port=3306;username=bogdanln_1;password=Vfndtq02032002 ;database=bogdanln_1");
         public void Openconnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)

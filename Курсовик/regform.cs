@@ -16,7 +16,7 @@ namespace Курсовик
         public regform()
         {
             InitializeComponent();
-         
+
 
 
         }
@@ -151,7 +151,7 @@ namespace Курсовик
 
         private void Registration_Click(object sender, EventArgs e)
         {
-            if ( Usname.Text == "Введите организ") 
+            if (Usname.Text == "Введите организ")
             {
                 MessageBox.Show("Введите организ");
                 return;
@@ -234,13 +234,27 @@ namespace Курсовик
         private void avtoriz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            log log = new log ();
+            log log = new log();
             log.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
         }
     }
 }

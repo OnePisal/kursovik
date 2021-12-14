@@ -48,7 +48,7 @@ namespace Курсовик
         {
             PictureBox pa = new PictureBox();
             pa.Name = "pa" + i;
-            pa.Image = Image.FromFile("C:/Users/Матвей/Desktop/важно пиздец/курсач 3000/Курсовик/Курсовик/Resources/premium-icon-gun-2062249.png");
+            //pa.Image = Image.FromFile("C:/Users/User/Desktop/rehc/Курсовик/Курсовик/Resources/pistol.png");
             pa.SizeMode = PictureBoxSizeMode.StretchImage;
             pa.Dock = DockStyle.Top;
             pa.Size = new Size(75, 75);
@@ -69,10 +69,11 @@ namespace Курсовик
             flw.Controls.Add(nbom);
         }
 
+
         private void addtxtBox(int i, FlowLayoutPanel flw)
         {
             TextBox nbom = new TextBox();
-            nbom.Name = "txt" + i;
+            nbom.Name = "txt" + data.Rows[i][0].ToString();
             nbom.Dock = DockStyle.Top;
             nbom.Width = 110;
 
@@ -80,17 +81,47 @@ namespace Курсовик
         }
         private void addButton(int i, FlowLayoutPanel flw)
         {
-            Button nbom = new Button();
-            nbom.Name = "btn" + i;
-            nbom.Dock = DockStyle.Top;
-            nbom.Text = "Купить";
-            nbom.Width = 110;
-            nbom.BackColor = Color.Teal;
-            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
-            flw.Controls.Add(nbom);
-        }
+            Button nbomb = new Button();
+            nbomb.Name = data.Rows[i][0].ToString();
+            nbomb.Dock = DockStyle.Top;
+            nbomb.Text = "Купить";
+            nbomb.Width = 110;
+            nbomb.BackColor = Color.Teal;
+            nbomb.Click += Button_Click;
+            nbomb.Tag = i;
 
-        private void addFlw(int i, FlowLayoutPanel flw)
+            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
+            flw.Controls.Add(nbomb);
+        }
+        private void Button_Click(object sender, EventArgs eventArgs)
+        {
+
+            DateTime curDate = DateTime.Now;
+            var button = (Button)sender;
+            Console.WriteLine(button.Name);
+            TextBox tbx = this.Controls.Find("txt" + button.Name, true).FirstOrDefault() as TextBox;
+            int count = Convert.ToInt32(tbx.Text);
+            string id_product = button.Name;
+            int price = count * Convert.ToInt32(data.Rows[Convert.ToInt32(button.Tag)][4]);
+            string sql = String.Format("INSERT INTO transactions (product, price,Data_product) VALUES (@product,@price,@date) ");
+            DB db = new DB();
+            db.Openconnection();
+            MySqlCommand command = new MySqlCommand(sql, db.GetConnection());
+            command.Parameters.AddWithValue("@product", id_product);
+            command.Parameters.AddWithValue("@price", price);
+            command.Parameters.AddWithValue("@date", curDate);
+            command.ExecuteNonQuery();
+            string sql1 = String.Format("UPDATE sklad SET Qugo= Qugo - @count WHERE ID = @Product");
+            MySqlCommand cmd = new MySqlCommand(sql1, db.GetConnection());
+            cmd.Parameters.AddWithValue("@count", count);
+            cmd.Parameters.AddWithValue("@Product", id_product);
+            cmd.ExecuteNonQuery();
+            db.closeconnectoin();
+
+
+            Console.WriteLine(button.Name);
+        }
+            private void addFlw(int i, FlowLayoutPanel flw)
         {
             FlowLayoutPanel nbom = new FlowLayoutPanel();
             nbom.Name = "flw" + i;
@@ -136,6 +167,11 @@ namespace Курсовик
         }
 
         private void flw_ma_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

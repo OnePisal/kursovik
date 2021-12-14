@@ -113,6 +113,7 @@
     <Compile Include="rock.Designer.cs">
       <DependentUpon>rock.cs</DependentUpon>
     </Compile>
+    <Compile Include="simul.cs" />
     <Compile Include="tank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +226,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sklad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ammu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartridges.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

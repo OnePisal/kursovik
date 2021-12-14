@@ -55,6 +55,7 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // flw_Rock
             // 

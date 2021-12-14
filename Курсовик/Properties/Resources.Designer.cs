@@ -63,6 +63,26 @@ namespace Курсовик.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ammu {
+            get {
+                object obj = ResourceManager.GetObject("Ammu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cartridges {
+            get {
+                object obj = ResourceManager.GetObject("cartridges", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_add_to_cart_1586090__1_ {
             get {
                 object obj = ResourceManager.GetObject("free-icon-add-to-cart-1586090 (1)", resourceCulture);
