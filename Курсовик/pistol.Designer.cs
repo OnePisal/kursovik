@@ -55,7 +55,7 @@ namespace Курсовик
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(800, 46);
             this.panel5.TabIndex = 3;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+       
             // 
             // flw_ma
             // 
@@ -65,7 +65,7 @@ namespace Курсовик
             this.flw_ma.Name = "flw_ma";
             this.flw_ma.Size = new System.Drawing.Size(800, 404);
             this.flw_ma.TabIndex = 4;
-            this.flw_ma.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_ma_Paint);
+
             // 
             // pistol
             // 

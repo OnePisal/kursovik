@@ -47,7 +47,6 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 
@@ -68,7 +67,6 @@ namespace Курсовик
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(364, 404);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -102,6 +100,7 @@ namespace Курсовик
             this.Controls.Add(this.panel3);
             this.Name = "cart";
             this.Text = "cart";
+
             this.Load += new System.EventHandler(this.cart_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

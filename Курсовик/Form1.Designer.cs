@@ -31,7 +31,6 @@ namespace Курсовик
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.PnlNaw = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,7 +56,6 @@ namespace Курсовик
             // panel2
             // 
             this.panel2.Controls.Add(this.PnlNaw);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,17 +73,6 @@ namespace Курсовик
             this.PnlNaw.Size = new System.Drawing.Size(3, 100);
             this.PnlNaw.TabIndex = 7;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(39, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "some user text here";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -96,7 +83,6 @@ namespace Курсовик
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "User Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -107,7 +93,6 @@ namespace Курсовик
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -128,7 +113,7 @@ namespace Курсовик
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 577);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+
             // 
             // Pnlna
             // 
@@ -137,7 +122,6 @@ namespace Курсовик
             this.Pnlna.Name = "Pnlna";
             this.Pnlna.Size = new System.Drawing.Size(5, 440);
             this.Pnlna.TabIndex = 7;
-            this.Pnlna.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnlna_Paint);
             // 
             // tank
             // 
@@ -302,7 +286,6 @@ namespace Курсовик
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(776, 577);
             this.panelmenu.TabIndex = 9;
-            this.panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel3
             // 
@@ -313,7 +296,6 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(776, 28);
             this.panel3.TabIndex = 9;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
             // Form1
             // 
@@ -342,7 +324,6 @@ namespace Курсовик
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel PnlNaw;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnDashboard;

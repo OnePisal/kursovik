@@ -55,7 +55,7 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+       
             // 
             // flw_plans
             // 
@@ -65,7 +65,7 @@ namespace Курсовик
             this.flw_plans.Name = "flw_plans";
             this.flw_plans.Size = new System.Drawing.Size(800, 404);
             this.flw_plans.TabIndex = 4;
-            this.flw_plans.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_plans_Paint);
+
             // 
             // plan
             // 

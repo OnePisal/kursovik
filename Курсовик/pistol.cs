@@ -24,10 +24,6 @@ namespace Курсовик
             Application.Exit();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         public DataTable selectTable()
         {
             DB db = new DB();
@@ -48,7 +44,7 @@ namespace Курсовик
         {
             PictureBox pa = new PictureBox();
             pa.Name = "pa" + i;
-            //pa.Image = Image.FromFile("C:/Users/User/Desktop/rehc/Курсовик/Курсовик/Resources/pistol.png");
+            pa.Image = Image.FromFile(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "pistol.png"));
             pa.SizeMode = PictureBoxSizeMode.StretchImage;
             pa.Dock = DockStyle.Top;
             pa.Size = new Size(75, 75);
@@ -65,8 +61,18 @@ namespace Курсовик
             nbom.Text = data.Rows[i][2].ToString();
             nbom.TextAlign = ContentAlignment.TopCenter;
             nbom.Font = new System.Drawing.Font("Comic Sans UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
             flw.Controls.Add(nbom);
+        }
+        private void addLabelPrice(int i, FlowLayoutPanel flw)
+        {
+            Label nbomb = new Label();
+            nbomb.Name = "lblPrice" + i;
+            nbomb.ForeColor = Color.Black;
+            nbomb.Dock = DockStyle.Top;
+            nbomb.Text = data.Rows[i][4].ToString() + " ₽";
+            nbomb.TextAlign = ContentAlignment.TopCenter;
+            nbomb.Font = new System.Drawing.Font("Comic Sans UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            flw.Controls.Add(nbomb);
         }
 
 
@@ -89,8 +95,6 @@ namespace Курсовик
             nbomb.BackColor = Color.Teal;
             nbomb.Click += Button_Click;
             nbomb.Tag = i;
-
-            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
             flw.Controls.Add(nbomb);
         }
         private void Button_Click(object sender, EventArgs eventArgs)
@@ -111,17 +115,29 @@ namespace Курсовик
             command.Parameters.AddWithValue("@price", price);
             command.Parameters.AddWithValue("@date", curDate);
             command.ExecuteNonQuery();
-            string sql1 = String.Format("UPDATE sklad SET Qugo= Qugo - @count WHERE ID = @Product");
+            string sql1 = String.Format("UPDATE sklad SET Qugo= Qugo - @count WHERE ID = @Product AND Qugo >= @count ");
+
             MySqlCommand cmd = new MySqlCommand(sql1, db.GetConnection());
             cmd.Parameters.AddWithValue("@count", count);
             cmd.Parameters.AddWithValue("@Product", id_product);
-            cmd.ExecuteNonQuery();
+            Console.WriteLine(cmd.ExecuteNonQuery());
+
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Вы купили товар");
+            }
+            else
+            {
+                MessageBox.Show("Выбирите кол-во товара меньше");
+            }
+
             db.closeconnectoin();
 
 
-            Console.WriteLine(button.Name);
+
+
         }
-            private void addFlw(int i, FlowLayoutPanel flw)
+        private void addFlw(int i, FlowLayoutPanel flw)
         {
             FlowLayoutPanel nbom = new FlowLayoutPanel();
             nbom.Name = "flw" + i;
@@ -129,25 +145,18 @@ namespace Курсовик
             nbom.BackColor = Color.Teal;
 
             nbom.Location = new Point(40, i * 100 + 50);
-            nbom.Size = new System.Drawing.Size(120, 170);
+            nbom.Size = new System.Drawing.Size(120, 190);
 
             flw.Controls.Add(nbom);
             addPicture(i, nbom);
             addLabel(i, nbom);
+            addLabelPrice(i, nbom);
             addtxtBox(i, nbom);
             addButton(i, nbom);
 
 
         }
 
-        private void pistol_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pistol_Load_1(object sender, EventArgs e)
         {
@@ -166,14 +175,6 @@ namespace Курсовик
             flw_ma = null;
         }
 
-        private void flw_ma_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

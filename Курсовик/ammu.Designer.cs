@@ -64,7 +64,6 @@ namespace Курсовик
             this.flw_MainAm.Name = "flw_MainAm";
             this.flw_MainAm.Size = new System.Drawing.Size(800, 404);
             this.flw_MainAm.TabIndex = 5;
-            this.flw_MainAm.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_MainAm_Paint);
             // 
             // ammu
             // 

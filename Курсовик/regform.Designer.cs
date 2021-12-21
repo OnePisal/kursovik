@@ -64,7 +64,7 @@ namespace Курсовик
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(517, 354);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -73,7 +73,7 @@ namespace Курсовик
             this.avtoriz.AutoSize = true;
             this.avtoriz.BackColor = System.Drawing.Color.DarkSlateGray;
             this.avtoriz.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avtoriz.Location = new System.Drawing.Point(100, 264);
+            this.avtoriz.Location = new System.Drawing.Point(226, 255);
             this.avtoriz.Name = "avtoriz";
             this.avtoriz.Size = new System.Drawing.Size(93, 13);
             this.avtoriz.TabIndex = 11;
@@ -85,7 +85,7 @@ namespace Курсовик
             this.registration.BackColor = System.Drawing.Color.Teal;
             this.registration.FlatAppearance.BorderSize = 0;
             this.registration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registration.Location = new System.Drawing.Point(63, 218);
+            this.registration.Location = new System.Drawing.Point(200, 211);
             this.registration.Name = "registration";
             this.registration.Size = new System.Drawing.Size(151, 31);
             this.registration.TabIndex = 10;
@@ -102,7 +102,7 @@ namespace Курсовик
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(205, 29);
             this.Login.TabIndex = 9;
-            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
+
             this.Login.Enter += new System.EventHandler(this.Login_Enter);
             this.Login.Leave += new System.EventHandler(this.Login_Leave);
             // 
@@ -116,7 +116,7 @@ namespace Курсовик
             this.Pass.PasswordChar = '*';
             this.Pass.Size = new System.Drawing.Size(209, 29);
             this.Pass.TabIndex = 8;
-            this.Pass.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+
             this.Pass.Enter += new System.EventHandler(this.Pass_Enter);
             this.Pass.Leave += new System.EventHandler(this.Pass_Leave);
             // 
@@ -141,7 +141,7 @@ namespace Курсовик
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+
             // 
             // Usname
             // 
@@ -202,7 +202,7 @@ namespace Курсовик
             this.label1.TabIndex = 0;
             this.label1.Text = "Регистрация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Label1_MouseMove);
             // 

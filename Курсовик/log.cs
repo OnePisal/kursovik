@@ -47,19 +47,15 @@ namespace Курсовик
             if (tabel.Rows.Count > 0)
             {
                 this.Hide();
-                Form1 form1 = new Form1();
+                Form1 form1 = new Form1(textBox1.Text);
 
                 form1.Show();
             }
 
             else
-                MessageBox.Show("No");
+                MessageBox.Show("Вы вели неправильный логин или пароль, попробуйте снова");
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -80,25 +76,6 @@ namespace Курсовик
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void reglab_Click(object sender, EventArgs e)
         {

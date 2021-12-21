@@ -37,6 +37,16 @@ namespace Курсовик
        
 
         }
+        public Form1(string login)
+        {
+            InitializeComponent();
+            label1.Text = login;
+
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 2));
+
+
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,10 +66,6 @@ namespace Курсовик
             OpenChildForm(new pistol(), sender);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
@@ -146,10 +152,7 @@ namespace Курсовик
             Application.Exit();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -204,31 +207,6 @@ namespace Курсовик
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Pnlna_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

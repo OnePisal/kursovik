@@ -121,17 +121,11 @@
   <data name="premium-icon-bullet-proof-vest-2062187" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-bullet-proof-vest-2062187.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Log1\locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="premium-icon-barracks-3016627 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\premium-icon-barracks-3016627 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="premium-icon-tank-2046893 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-tank-2046893 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free-icon-rifle-2062174 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free-icon-rifle-2062174 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="premium-icon-barracks-3016627 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\premium-icon-barracks-3016627 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="premium-icon-barracks-2046897" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-barracks-2046897.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,23 +133,38 @@
   <data name="free-icon-soldier-2062172" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-soldier-2062172.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="free-icon-add-to-cart-1586090 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free-icon-add-to-cart-1586090 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Log1\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="premium-icon-barracks-2046897 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\premium-icon-barracks-2046897 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cartridges1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cartridges1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="premium-icon-barracks-3016627" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-barracks-3016627.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Log1\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pistol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="premium-icon-barracks-2046897 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\premium-icon-barracks-2046897 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-icon-rifle-2062174 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-icon-rifle-2062174 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="premium-icon-gun-2062249" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-gun-2062249.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sklad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sklad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cartridges" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cartridges.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Log1\locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ammu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ammu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +178,19 @@
   <data name="premium-icon-warehouse-4450774" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-warehouse-4450774.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sklad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sklad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="premium-icon-torpedo-2062254" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium-icon-torpedo-2062254.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cartridges" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cartridges.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="automatic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\automatic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

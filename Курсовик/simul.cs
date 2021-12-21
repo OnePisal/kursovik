@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,16 +29,17 @@ namespace Курсовик
             db.closeconnectoin();
             return flag;
         }
-        public bool Add(string Qugo, string Tip_go, string Type, string Price)
+        public bool Add(string Product, string Id_User, string Dcc, string Price, string ID_products )
         {
             DB db = new DB();
             bool flag = false;
-            MySqlCommand command = new MySqlCommand($"INSERT INTO sklad (Qugo, Tip_go, Type, Price) VALUES (@Qugo, @Tip_go, @Type, @Price)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand($"INSERT INTO Supply_agreement (Product, Id_User, Dcc, Price, ID_products) VALUES (@Product, @Id_User, @Dcc, @Price, @ID_products)", db.GetConnection());
 
-            command.Parameters.AddWithValue("@Qugo", Qugo);
-            command.Parameters.AddWithValue("@Tip_go", Tip_go);
-            command.Parameters.AddWithValue("@Type", Type);
+            command.Parameters.AddWithValue("@Product", Product);
+            command.Parameters.AddWithValue("@Id_User", Id_User);
+            command.Parameters.AddWithValue("@Dcc", Dcc);
             command.Parameters.AddWithValue("@Price", Price);
+            command.Parameters.AddWithValue("@ID_products", ID_products);
             db.Openconnection();
             if (command.ExecuteNonQuery() == 1)
             {

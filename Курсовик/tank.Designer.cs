@@ -64,7 +64,6 @@ namespace Курсовик
             this.flw_tank.Name = "flw_tank";
             this.flw_tank.Size = new System.Drawing.Size(800, 404);
             this.flw_tank.TabIndex = 4;
-            this.flw_tank.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_tank_Paint);
             // 
             // tank
             // 

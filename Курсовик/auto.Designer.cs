@@ -44,7 +44,6 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 
@@ -64,7 +63,6 @@ namespace Курсовик
             this.flw_Main.Name = "flw_Main";
             this.flw_Main.Size = new System.Drawing.Size(800, 404);
             this.flw_Main.TabIndex = 4;
-            this.flw_Main.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_Main_Paint);
             // 
             // auto
             // 

@@ -26,15 +26,6 @@ namespace Курсовик
             Application.Exit();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flw_Rock_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         public DataTable selectTable()
         {
@@ -56,7 +47,7 @@ namespace Курсовик
         {
             PictureBox pb = new PictureBox();
             pb.Name = "pb" + i;
-           // pb.Image = Image.FromFile(""C:/ Users / User / Desktop / rehc / Курсовик / Курсовик / Resources / rock.png");
+            pb.Image = Image.FromFile(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "rock.png"));
             pb.SizeMode = PictureBoxSizeMode.StretchImage;
             pb.Dock = DockStyle.Top;
             pb.Size = new Size(75, 75);
@@ -73,10 +64,19 @@ namespace Курсовик
             nbomb.Text = data.Rows[i][2].ToString();
             nbomb.TextAlign = ContentAlignment.TopCenter;
             nbomb.Font = new System.Drawing.Font("Comic Sans UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
             flw.Controls.Add(nbomb);
         }
-
+        private void addLabelPrice(int i, FlowLayoutPanel flw)
+        {
+            Label nbomb = new Label();
+            nbomb.Name = "lblPrice" + i;
+            nbomb.ForeColor = Color.Black;
+            nbomb.Dock = DockStyle.Top;
+            nbomb.Text = data.Rows[i][4].ToString() + " ₽";
+            nbomb.TextAlign = ContentAlignment.TopCenter;
+            nbomb.Font = new System.Drawing.Font("Comic Sans UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            flw.Controls.Add(nbomb);
+        }
         private void addtxtBox(int i, FlowLayoutPanel flw)
         {
             TextBox nbomb = new TextBox();
@@ -97,7 +97,6 @@ namespace Курсовик
             nbomb.Click += Button_Click;
             nbomb.Tag = i;
 
-            //nbomb.Text = checks.BalanceCheck[i] + " " + checks.CurrencyCheck[i];
             flw.Controls.Add(nbomb);
         }
         private void Button_Click(object sender, EventArgs eventArgs)
@@ -118,17 +117,29 @@ namespace Курсовик
             command.Parameters.AddWithValue("@price", price);
             command.Parameters.AddWithValue("@date", curDate);
             command.ExecuteNonQuery();
-            string sql1 = String.Format("UPDATE sklad SET Qugo= Qugo - @count WHERE ID = @Product");
+            string sql1 = String.Format("UPDATE sklad SET Qugo= Qugo - @count WHERE ID = @Product AND Qugo >= @count ");
+
             MySqlCommand cmd = new MySqlCommand(sql1, db.GetConnection());
             cmd.Parameters.AddWithValue("@count", count);
             cmd.Parameters.AddWithValue("@Product", id_product);
-            cmd.ExecuteNonQuery();
+            Console.WriteLine(cmd.ExecuteNonQuery());
+
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Вы купили товар");
+            }
+            else
+            {
+                MessageBox.Show("Выбирите кол-во товара меньше");
+            }
+
             db.closeconnectoin();
 
 
-            Console.WriteLine(button.Name);
+
+
         }
-            private void addFlw(int i, FlowLayoutPanel flw)
+        private void addFlw(int i, FlowLayoutPanel flw)
         {
             FlowLayoutPanel nbomb = new FlowLayoutPanel();
             nbomb.Name = "flw" + i;
@@ -136,11 +147,12 @@ namespace Курсовик
             nbomb.BackColor = Color.Teal;
 
             nbomb.Location = new Point(40, i * 100 + 50);
-            nbomb.Size = new System.Drawing.Size(120, 170);
+            nbomb.Size = new System.Drawing.Size(120, 190);
 
             flw.Controls.Add(nbomb);
             addPicture(i, nbomb);
             addLabel(i, nbomb);
+            addLabelPrice(i, nbomb);
             addtxtBox(i, nbomb);
             addButton(i, nbomb);
 
@@ -153,7 +165,6 @@ namespace Курсовик
 
             data.Clear();
             data = selectTable();
-            //FlowLayoutPanel flw = flw_Main;
             for (int i = 0; i < data.Rows.Count; i++)
             {
 
@@ -166,15 +177,7 @@ namespace Курсовик
             flw_Rock = null;
         }
 
-        private void flw_Main_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
 

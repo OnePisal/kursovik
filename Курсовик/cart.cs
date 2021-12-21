@@ -40,15 +40,6 @@ namespace Курсовик
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         simul f = new simul();
 
@@ -81,10 +72,11 @@ namespace Курсовик
 
 
 
-        string[] ougo = { "50", "1000", "35", "45", "21" };
-        string[]  tip_go = { "AK-47", "M4A1", "Usp-s", "Galil", "Glock", "Desert-eagle", "Макаров", };
-        string[] type = { "automatic", "pistol", "pistol", "automatic", "automatic" };
-        string[]  price = { "2000", "1000", "1555", "4586", "23424" };
+        string[] product = { "AK-47", "M4A4", "GLOCK-18", "ТТ", "ПМ-80", "Т-90", "СУ-57", "Рысь", "Крылатая", "Зем.зем.", "Зем.воз.", "Воз.воз.", "Кольт M1911", "Калибр 9", "Калибр 7.62", "калибр 5.56", "БТР-80", "БКЗ", "ZTZ-99", "MTV", "M3", "IOTV", "IBA", "HK G36", "FN Skar"};
+        string[]  id_user = { "1", "2", "3", "4", "5", "6", "7", "8","9","10","11", "12",  "13", "14", "15", "16", "17", "18", "19", "20", "21" ,  "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41" };
+        string[] ddc = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        string[]  price = { "2000", "1000", "1555", "4586", "23424", "343мил", "3000мил", "200000", "10мил.", "31000", "30", "15", "22", "19мил", "43670", "3000мил", "200000", "10мил.", "25000", "45000", "150000", "167800", "19мил", "43670" };
+        string[] id_product = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41" };
 
         Random rang = new Random();
         int coun = 0;
@@ -94,12 +86,13 @@ namespace Курсовик
             while (flag)
             {
 
-                string Qugo = ougo[rang.Next(0, ougo.Length)];
-                string Tip_go = tip_go[rang.Next(0, tip_go.Length)];
-                string Type = type[rang.Next(0, type.Length)];
+                string Product = product[rang.Next(0, product.Length)];
+                string Id_user = id_user[rang.Next(0, id_user.Length)];
+                string Ddc = ddc[rang.Next(0, ddc.Length)];
                 string Price = price[rang.Next(0, price.Length)];
+                string Id_product = id_product[rang.Next(0, id_product.Length)];
 
-                d.Add ( Qugo , Tip_go, Type, Price);
+                d.Add (Product, Id_user, Ddc, Price, Id_product);
                 coun++;
                 label1.Invoke(new Action(() => label1.Text = coun.ToString()));
                 Thread.Sleep(300);
@@ -122,6 +115,7 @@ namespace Курсовик
             flag = false;
 
         }
+
 
     }
 }

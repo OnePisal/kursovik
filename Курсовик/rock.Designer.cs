@@ -55,7 +55,6 @@ namespace Курсовик
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 46);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // flw_Rock
             // 
@@ -64,7 +63,6 @@ namespace Курсовик
             this.flw_Rock.Name = "flw_Rock";
             this.flw_Rock.Size = new System.Drawing.Size(800, 404);
             this.flw_Rock.TabIndex = 4;
-            this.flw_Rock.Paint += new System.Windows.Forms.PaintEventHandler(this.flw_Rock_Paint);
             // 
             // rock
             // 

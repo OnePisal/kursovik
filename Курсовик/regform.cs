@@ -26,11 +26,6 @@ namespace Курсовик
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -51,10 +46,6 @@ namespace Курсовик
             }
         }
 
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Usname_TextChanged(object sender, EventArgs e)
         {
@@ -98,10 +89,7 @@ namespace Курсовик
             }
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void Pass_Enter(object sender, EventArgs e)
         {
@@ -119,11 +107,6 @@ namespace Курсовик
                 Pass.Text = "Введите пароль";
                 Pass.ForeColor = Color.DarkSlateGray;
             }
-        }
-
-        private void TextBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void Login_Enter(object sender, EventArgs e)
@@ -144,10 +127,6 @@ namespace Курсовик
             }
         }
 
-        private void Login_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Registration_Click(object sender, EventArgs e)
         {
@@ -226,10 +205,6 @@ namespace Курсовик
             else
                 return false;
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void avtoriz_Click(object sender, EventArgs e)
         {
@@ -238,10 +213,6 @@ namespace Курсовик
             log.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
